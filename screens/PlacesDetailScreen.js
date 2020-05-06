@@ -2,7 +2,15 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 const PlacesDetailScreen = (props) => {
-  return <View><Text>PlacesDetailScreen</Text></View>;
+  return (
+    <View>
+      <Text>PlacesDetailScreen</Text>
+    </View>
+  );
+};
+
+PlacesDetailScreen.navigationOptions = (navData) => {
+  title: navData.navigation.getParam("placeTitle");
 };
 
 const styles = StyleSheet.create({});
