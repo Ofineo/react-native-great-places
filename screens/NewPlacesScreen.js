@@ -11,6 +11,7 @@ import Colors from "../constants/Colors";
 import { useDispatch } from "react-redux";
 import * as placesActions from "../store/actions/places";
 import ImgPicker from "../components/ImgPicker";
+import LocationPicker from "../components/LocationPicker";
 
 const NewPLacesScreen = (props) => {
     const [titleValue, setTitleValue] =useState('');
@@ -36,6 +37,7 @@ const NewPLacesScreen = (props) => {
         <Text style={styles.label}>Title</Text>
         <TextInput style={styles.textInput} onChangeText={titleChangeHandler} value={titleValue} />
         <ImgPicker onImageTaken={imageTakenHandler}/>
+        <LocationPicker />
         <Button title="SAve PLace" color={Colors.primary} onPress={savePlaceHandler} />
       </View>
     </ScrollView>
